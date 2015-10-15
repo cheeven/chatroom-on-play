@@ -1,0 +1,15 @@
+@(message: String)(implicit request: RequestHeader)
+
+@main(message) {
+<div class="row-fluid">
+    <div class="col-md-4">
+        @chatroom("1")
+    </div>
+    <div class="col-md-4">
+        @chatroom("2")
+    </div>
+    <div class="col-md-4">
+        @chatroom("3")
+    </div>
+</div>
+}

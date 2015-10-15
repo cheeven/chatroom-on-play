@@ -1,0 +1,13 @@
+@(id: String)(implicit request: RequestHeader)
+
+<div class="chatroom-@id">
+    <input type="button" value="Connect" class="connectButton">
+    <input type="button" value="Diconnect" class="disconnectButton" disabled>
+    <input type="text" size="20" class="messageText" disabled>
+    <div class="messages"></div>
+</div>
+<script>
+$(document).ready(function(){
+    setupChatroom(@id, '@routes.Application.wstest.webSocketURL()');
+});
+</script>
